@@ -1,5 +1,51 @@
-h1
-	width 100%
-	height 100px
-	line-height @height
-	color red
+.person-wrapper
+	background #282c34
+	width 1000px
+	height auto
+	margin 0 auto
+	color #fff
+	.header-info
+		height 100px
+		padding 0 20px
+		position relative
+		.headerImg
+			width 100px
+			height @width
+			float left
+			padding 20px
+			box-sizing border-box
+			.img
+				display block
+				width 100%
+				height 100%
+				background url(./images/mark.png) no-repeat
+				background-size cover
+				border-radius 10px
+		.name
+			margin-left 100px
+			height 100px
+			padding 10px 0 0 20px
+			box-sizing border-box
+			h1
+				font-size 34px
+		.backHome
+			display block
+			width auto
+			color #fff
+			position absolute
+			right 40px
+			top 20px
+	.content
+		padding 60px
+		border-top 1px solid #fff
+		ul
+			li
+				line-height 40px
+	.footer-info
+		padding 30px 60px
+		color #fff
+		border-top 1px dashed #fff
+		p
+			font-size 14px
+		a
+			color #ccc

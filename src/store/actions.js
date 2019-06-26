@@ -6,7 +6,7 @@ export function setPageTitle (data) {
 }
 
 export function setInfoList (data) {
-	debugger
+	// debugger
   return (dispatch, getState) => {
     // 使用fetch实现异步请求
     window.fetch('/api/getInfoList', {
@@ -23,4 +23,10 @@ export function setInfoList (data) {
 			}
     })
   }
+}
+
+export function setPersonal(data) {
+	return (dispatch, getState) => {
+		dispatch({type: 'SET_PERSON_INFO', data: data})
+	}
 }

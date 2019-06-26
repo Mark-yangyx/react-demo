@@ -23,8 +23,18 @@ function infoList (state = defaultState.infoList, action) {
   }
 }
 
+function personInfo (state = defaultState.personInfo, action) {
+	switch (action.type) {
+		case 'SET_PERSON_INFO':
+			return action.data
+		default:
+			return state
+	}
+}
+
 // 导出所有reducer
 export default combineReducers({
 	pageTitle,
-	infoList
+	infoList,
+	personInfo
 })
