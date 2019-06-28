@@ -8,9 +8,24 @@ import { setPageTitle, setInfoList } from './store/actions.js'
 
 class App extends Component{
 
-	// constructor(props) {
-  //   super(props)
-	// }
+	constructor(props) {
+		super(props)
+		this.state = {
+			liData: [{
+				key: 'name',
+				value: 'mark'
+			}, {
+				key: 'authoer',
+				value: 'markyang'
+			}, {
+				key: 'demo1',
+				value: 'demo1'
+			}, {
+				key: 'demo2',
+				value: 'stylus'
+			}]
+		}
+	}
 
 	componentDidMount () {
 		let { setPageTitle, setInfoList } = this.props
@@ -21,22 +36,16 @@ class App extends Component{
     
     // 触发setInfoList action
     setInfoList()
-  }
-	state = {
-		liData: [{
-			key: 'name',
-			value: 'mark'
-		}, {
-			key: 'authoer',
-			value: 'markyang'
-		}, {
-			key: 'demo',
-			value: 'react'
-		}, {
-			key: 'demo',
-			value: 'stylus'
-		}]
 	}
+	
+	routerTo(k) {
+		if (k.key === 'demo1') {
+			this.props.history.push('/demo1');
+		} else {
+			this.props.history.push('/personal');
+		}
+	}
+	
 	render() {
 		// 从props中解构store
 		let {pageTitle, infoList} = this.props;
@@ -57,7 +66,7 @@ class App extends Component{
 									<span className="span-l">{k.key}</span>
 									<label>:</label>
 									<span className="span-r">
-									 	<a href="#/personal">{k.value}</a>
+									 	<a href="javascript:;" onClick={() => this.routerTo(k)}>{k.value}</a>
 									</span>
 								</li>
 							)
