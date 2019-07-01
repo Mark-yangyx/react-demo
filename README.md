@@ -9,5 +9,3 @@ cd react-demo
 npm (cnpm) install
 
 npm run start
-
-测试加密

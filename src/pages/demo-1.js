@@ -35,7 +35,7 @@ class Clock extends React.Component {
 						<h1>markyang</h1>
 						<span>web前端-react</span>
 					</div>
-					<a href="#/" className="backHome">返回首页（测试加密）</a>
+					<a href="#/" className="backHome">返回首页</a>
 				</header>
 				<div className="demo1">
 					<h1>hello, world</h1>
