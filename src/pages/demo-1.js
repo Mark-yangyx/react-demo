@@ -1,6 +1,7 @@
 import React from 'react';
 import './personal/index.styl';
 import './demos.styl';
+import Header from './components/header'
 
 class Clock extends React.Component {
 	constructor(props) {
@@ -27,16 +28,7 @@ class Clock extends React.Component {
 	render() {
 		return (
 			<div className="person-wrapper">
-				<header className="header-info">
-					<div className="headerImg">
-						<span className="img"></span>
-					</div>
-					<div className="name">
-						<h1>markyang</h1>
-						<span>web前端-react</span>
-					</div>
-					<a href="#/" className="backHome">返回首页</a>
-				</header>
+				<Header></Header>
 				<div className="demo1">
 					<h1>hello, world</h1>
 					<h2>It is {this.state.date.toLocaleTimeString()}.</h2>

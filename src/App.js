@@ -19,10 +19,10 @@ class App extends Component{
 				value: 'markyang'
 			}, {
 				key: 'demo1',
-				value: 'demo1'
+				value: 'state'
 			}, {
-				key: 'demo2',
-				value: 'stylus'
+				key: 'boniu',
+				value: 'baby'
 			}]
 		}
 	}
@@ -38,9 +38,12 @@ class App extends Component{
     setInfoList()
 	}
 	
-	routerTo(k) {
+	routerTo(k, e) {
+		e.preventDefault(); // e 是一个合成事件(当使用箭头函数时，需要显示的传参)
 		if (k.key === 'demo1') {
 			this.props.history.push('/demo1');
+		} else if (k.key === 'boniu') {
+			this.props.history.push('/boniu')
 		} else {
 			this.props.history.push('/personal');
 		}
@@ -66,7 +69,7 @@ class App extends Component{
 									<span className="span-l">{k.key}</span>
 									<label>:</label>
 									<span className="span-r">
-									 	<a href="javascript:;" onClick={() => this.routerTo(k)}>{k.value}</a>
+									 	<a href="#" onClick={(e) => this.routerTo(k, e)}>{k.value}</a>
 									</span>
 								</li>
 							)
