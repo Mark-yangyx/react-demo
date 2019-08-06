@@ -23,6 +23,9 @@ class App extends Component{
 			}, {
 				key: 'boniu',
 				value: 'baby'
+			}, {
+				key: 'state',
+				value: 'about-state'
 			}]
 		}
 	}
@@ -44,6 +47,8 @@ class App extends Component{
 			this.props.history.push('/demo1');
 		} else if (k.key === 'boniu') {
 			this.props.history.push('/boniu')
+		} else if (k.key === 'state') {
+			this.props.history.push('/state')
 		} else {
 			this.props.history.push('/personal');
 		}
