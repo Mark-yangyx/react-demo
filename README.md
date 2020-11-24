@@ -1,5 +1,5 @@
 # react-demo
-React exercise
+React+redux 入门级实例
 
 + 1、该示例是一个简单的react入门实例，根据官方文档及网上资料写的小demo
 + 2、实现的功能点列表：
